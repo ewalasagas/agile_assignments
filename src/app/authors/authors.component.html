@@ -1,0 +1,24 @@
+<h1>Assignment 1</h1>
+<h2>{{authors.length}} Authors</h2>
+<ul>
+    <li *ngFor="let author of authors">
+        {{author}}
+    </li>
+</ul>
+<hr>
+<h1>Assignment 2</h1>
+<p>How to toggle classes</p>
+<div (click)="onClicked()">
+    <i class="bi" 
+        [class.bi-star]="isActive"
+        [class.bi-star-fill]="!isActive"
+    ></i>
+</div>
+<hr>
+<h1>Assignment 3</h1>
+<p>Title Casing</p>
+<input type="text" [(ngModel)]="casing" (keyup)="onKeyUp()"/>
+<br/>
+{{casing | titlecase}}
+<br/>
+{{casing | titleCase}}
