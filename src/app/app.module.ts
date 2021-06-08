@@ -8,13 +8,15 @@ import { AuthorsService } from './authors.service';
 import { AuthorsComponent } from './authors/authors.component';
 import { TitleCasePipe } from './title-case.pipe';
 import { LikeComponent } from './like/like.component';
+import { ZippyComponent } from './zippy/zippy.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthorsComponent,
     TitleCasePipe,
-    LikeComponent
+    LikeComponent,
+    ZippyComponent
   ],
   imports: [
     BrowserModule,
