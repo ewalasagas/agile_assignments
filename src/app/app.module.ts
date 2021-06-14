@@ -12,6 +12,8 @@ import { ZippyComponent } from './zippy/zippy.component';
 import { CourseFormComponent } from './course-form/course-form.component';
 import { PasswordFormComponent } from './password-form/password-form.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
+import { PostsComponent } from './posts/posts.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,13 +24,15 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
     ZippyComponent,
     CourseFormComponent,
     PasswordFormComponent,
-    ChangePasswordComponent
+    ChangePasswordComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [
     AuthorsService
