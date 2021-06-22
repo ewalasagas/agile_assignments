@@ -14,6 +14,10 @@ import { PasswordFormComponent } from './password-form/password-form.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { PostsComponent } from './posts/posts.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HomePageComponent } from './home-page/home-page.component';
+import { RouterModule } from '@angular/router';
+import { HomeProfileComponent } from './home-profile/home-profile.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -25,14 +29,20 @@ import { HttpClientModule } from '@angular/common/http';
     CourseFormComponent,
     PasswordFormComponent,
     ChangePasswordComponent,
-    PostsComponent
+    PostsComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot([
+      {path: '', component: HomePageComponent},
+      {path: 'archive/:year/:month', component: HomeProfileComponent},
+      {path: '**', component: NotFoundComponent}
+    ])
   ],
   providers: [
     AuthorsService
